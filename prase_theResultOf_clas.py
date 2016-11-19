@@ -16,6 +16,7 @@ r2 = re.compile('/|[a-z]|\*')
 
 f_ab = list(map(lambda x: r1.sub('', x), f_))
 f_ab = list(map(lambda x: r1s.sub('.', x), f_ab))
+#f_ab = list(map(lambda x:re.split(' +',x),f_ab))
 
 f_re = list(map(lambda x: r2.sub('', x), f_))
 f_re_list = list(map(lambda x: re.split(' +', x), f_re))

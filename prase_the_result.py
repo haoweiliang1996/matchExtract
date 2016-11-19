@@ -1,29 +1,4 @@
-'''
-with open("result_str.out","r") as f:
-    str=list(f)
-str=list(map(lambda x:x.split(' '),str))
-def isok(ll=[]):
-    kount=0
-    if ll[0]=='的':
-        return False
-    for i in range(len(ll)):
-        if ll[i]=='气象台' or ll[i]=='２０时':
-            return False
-        if ll[i]=='的' or ll[i]=='的\n' or ll[i]=='是':
-            kount+=1
-    kount=len(ll)-kount
-    if kount>=2 and kount<=3:
-        return True
-    else:
-        return  False
-
-str=list(filter(isok,str))
-for i in str:
-    print(i)
-'''
 import sys
-#with open('spmf_out/'+sys.argv[1]+'BIDE+_'+sys.argv[2]+'.out','r') as f:
-#   f_list=f.readlines()
 import json
 import re
 import os
