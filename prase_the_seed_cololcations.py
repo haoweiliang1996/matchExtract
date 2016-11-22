@@ -1,3 +1,4 @@
+#对最原始所给的种子库处理，去除‘词性’，尖括号等，所得结果去clas程序里面加tag
 import re
 
 with open('原料/collocation.in','r') as f:

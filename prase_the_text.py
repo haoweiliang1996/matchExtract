@@ -41,8 +41,11 @@ def pre_prase(dir='',file_name=''):
 if __name__=='__main__':
     div_num=int(sys.argv[2])
     file_name=sys.argv[1]
-    if not os.path.exists('spmf_in/'+file_name):
-        os.makedirs('spmf_in/'+file_name)
+    output_pathname='spmf_in/'+file_name+'/'+'before_prase'
+
+    #查看存放某数据的结果的大文件夹是否存在
+    if not os.path.exists(output_pathname):
+        os.makedirs(output_pathname)
         print('make dir')
     #else:
      #   input('')
@@ -74,7 +77,7 @@ if __name__=='__main__':
         dic_of_output=search_database(data_base)
 
         for word in task:
-            with open("spmf_in/"+file_name+'/'+word+'_spmf'+'.in','a') as f_result:
+            with open(output_pathname+'/'+word+'_spmf'+'.in','a') as f_result:
                 for sentence_id in dic_of_output[word]:
                     str1 = str(reduce(lambda a, b: a + ' -1 ' + b, data_base[sentence_id]))
                     str1 += ' -1 -2\n'
