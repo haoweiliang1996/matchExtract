@@ -1,4 +1,4 @@
-# 处理postagger后的结果，形成以中心词为key的词典，该词典的vaule是以pos pattern为key，出现次数为vaule的dict
+# 处理种子库分词后的结果，形成以中心词为key的词典，该词典的vaule是以pos pattern为key，出现次数为vaule的dict
 import re
 from collections import OrderedDict
 from pprint import  pprint

@@ -1,9 +1,10 @@
-import re
-import json
-import sys
 import os
+import re
+import sys
 from functools import reduce
-import split_the_file
+
+import json
+
 
 def pre_prase(dir='',file_name=''):
     print(file_name)

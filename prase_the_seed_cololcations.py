@@ -11,6 +11,7 @@ f_lines = list(map(lambda x: re.sub('!|词类', '', x), f_lines))
 
 f_lines = list(map(lambda x: re.sub('>|<', ' ', x), f_lines))
 
+#去除行首的一个空格
 for i in range(len(f_lines)):
     f_lines[i]=f_lines[i][1:]
 f_lines=list(map(lambda x:re.sub('\* ','*',x),f_lines))
